@@ -1,0 +1,16 @@
+#
+#About: This must be run on all new servers
+#
+---
+- hosts: '{{inventory}}'
+  become: yes
+  roles:
+  - common
+  - hostname
+  - ntp
+  - motd
+  - ssh-banner
+  - postfix
+  #- psad
+  #- rootkit-scanners
+  #- tiger

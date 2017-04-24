@@ -1,0 +1,9 @@
+#
+#About: This will install teamcity
+#
+---
+- hosts: '{{inventory}}'
+  become: yes
+  roles:
+  - jdk
+  - teamcity
